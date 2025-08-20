@@ -8,8 +8,8 @@
 
 int main() {
     
-       //Dados carta 1
-    int população1, pontos1;
+      //Dados carta 1
+    int população1, pontos1; //coloquei junto pq vi o professor fazendo assim, mas me sinto confortavel fazendo 1 por vez
     float area1, pib1;
     char cidade1[50];
     char estado1; 
@@ -23,12 +23,12 @@ int main() {
     char codigo2[4];
 
     //cadastro carta 1
-    printf(" carta 1 \n");
+    printf(" carta 1 \n"); 
     printf("Estado (A-H): ");
     scanf(" %c", &estado1);
 
     printf("Código (A01):");
-    scanf("%3s", codigo1);
+    scanf("%3s", codigo1); //antes de terminar coloquei no chat gpt para corrigir e disse que poderia dar bug se não ficasse informando que seriam 3 caracteris
 
     printf("Nome da cidade:");
     scanf(" %[^\n]", cidade1);
@@ -57,7 +57,7 @@ int main() {
     scanf(" %[^\n]", cidade2);
 
     printf("População: ");
-    scanf("d%", &população2);
+    scanf("%d", &população2);
 
     printf("Área (km²): ");
     scanf("%f", &area2);
@@ -71,7 +71,7 @@ int main() {
     //Mostrar carta 1
     printf("Carta 1 \n");
     printf("\n--- Carta 1 ---\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %c\n", estado1); // mesmo colocando \n quando rodo vai tudo junto
     printf("Código: %s\n", codigo1);
     printf("Cidade: %s\n", cidade1);
     printf("População: %d\n", população1);
@@ -79,15 +79,14 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib1);
     printf("Pontos turísticos: %d\n", pontos1);
 
-    / Mostrar carta 2
-    printf( Carta 2 \n");
+    // Mostrar carta 2
+    printf( "Carta 2 \n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
-    printf("População: %d\n", populacao2);
+    printf("População: %d\n", população2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
-    
     return 0;
 }
