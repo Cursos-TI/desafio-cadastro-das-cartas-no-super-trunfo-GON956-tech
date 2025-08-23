@@ -10,9 +10,9 @@
 
 int main() {
     // Dados carta 1
-    char estado1 [20], codigo1[4], cidade1[50];
+    char estado1 [20], codigo1[4], cidade1[50]; //tive muito problema pq esqueci de declacar uma string
     unsigned long int populacao1;
-    float area1, pib1;
+    float area1, pib1; //estou colocando as variaveis uma do lado da outra pq vi o professor sergio, mas me perdi um pouco o ideal é declarar uma por uma
     int pontos1;
     float densidade1, pibPerCapita1, superPoder1;
 
@@ -24,7 +24,7 @@ int main() {
     float densidade2, pibPerCapita2, superPoder2;
 
     // Entrada carta 1 
-    printf("=== Carta 1 ===\n");
+    printf(" Carta 1 \n");
     printf("Estado (A-H): ");
     scanf(" %s", &estado1);
     
@@ -32,7 +32,7 @@ int main() {
     scanf(" %3s", codigo1);
     
     printf("Nome da cidade: ");
-    scanf("%s", cidade1);
+    scanf("%10s", cidade1); //coloquei %10s para diferebciar de estado, pq no proximo trabalho vou precisar diferenciar um do outro
     
     printf("População: ");
     scanf("%lu", &populacao1);
@@ -52,19 +52,25 @@ int main() {
     superPoder1 = (float)populacao1 + area1 + pib1 + pontos1 + pibPerCapita1 + (1.0 / densidade1);
 
     //  Entrada carta 2 
-    printf("\n=== Carta 2 ===\n");
+    printf(" Carta 2 \n");
     printf("Estado (A-H): ");
     scanf(" %s", &estado2);
+    
     printf("Código (ex: B02): ");
     scanf(" %3s", codigo2);
+    
     printf("Nome da cidade: ");
-    scanf(" %s", cidade2);
+    scanf(" %10s", cidade2);
+    
     printf("População: ");
     scanf("%lu", &populacao2);
+    
     printf("Área (km²): ");
     scanf("%f", &area2);
+    
     printf("PIB (em bilhões): ");
     scanf("%f", &pib2);
+    
     printf("Pontos turísticos: ");
     scanf("%d", &pontos2);
 
@@ -74,8 +80,8 @@ int main() {
     superPoder2 = (float)populacao2 + area2 + pib2 + pontos2 + pibPerCapita2 + (1.0 / densidade2);
 
     //  Comparação
-    printf("\n--- Comparação de Cartas ---\n");
-    printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2 ? 1 : 0);
+    printf("Comparação de Cartas\n"); // foi muito dificil essa parte não estava conseguindo acertar, ralei aqui 
+    printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2 ? 1 : 0); 
     printf("Área: Carta 1 venceu (%d)\n", area1 > area2 ? 1 : 0);
     printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2 ? 1 : 0);
     printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontos1 > pontos2 ? 1 : 0);
